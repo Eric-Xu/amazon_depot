@@ -1,6 +1,9 @@
 class Product < ActiveRecord::Base
   attr_accessible :description, :image_url, :price, :title
 
+  # tells all queries to order by title
+  default_scope order: 'title'
+
   validates :title, :description, :image_url, presence: { message: "^Did you forget the title?" }
   validates :price, numericality: { greater_than_or_equal_to: 0.01 }
   validates :title, uniqueness: { message: "^%{value} has already been taken. Sorry." }
