@@ -122,7 +122,6 @@
   float: left;
 }
 
-
 #store .entry h3 {
  margin-top: 0;
  margin-bottom: 2px;
@@ -147,4 +146,8 @@
   color: #44a;
   font-weight: bold;
   margin-right: 2em;
+}
+
+#store .entry form, #store .entry form div {
+  display: inline;
 }
