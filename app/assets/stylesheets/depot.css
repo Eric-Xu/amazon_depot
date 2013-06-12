@@ -36,9 +36,10 @@
 }
 
 #main {
-  margin-left: 17em;
+  margin-left: 18em;
   padding-top: 4ex;
   padding-left: 2em;
+  padding-right: 2em;
   background: white;
 }
 
@@ -47,7 +48,7 @@
   padding-top: 1em;
   padding-left: 1em;
   padding-bottom: 1em;
-  width: 16em;
+  width: 17em;
   background: #141;
 }
 #side a {
@@ -163,4 +164,14 @@
 
 #store .entry form, #store .entry form div {
   display: inline;
+}
+
+/* Styles for the cart in the sidebar */
+
+#cart, #cart table {
+  font-size: smaller; color: white;
+}
+
+#cart table {
+  border-top: 1px dotted #595; border-bottom: 1px dotted #595; margin-bottom: 10px;
 }

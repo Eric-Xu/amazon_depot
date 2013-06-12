@@ -44,13 +44,14 @@ class LineItemsController < ApplicationController
     product = Product.find(params[:product_id])
     # This no longer works in Rails 3.2.13
     # @line_item = @cart.line_items.build(product: product)
+    # Use this instead:
     # @line_item = @cart.line_items.build
     # @line_item.product = product
     @line_item = @cart.add_product(product.id)
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item.cart, notice: 'Successfullly added product.'}
+        format.html { redirect_to store_url, notice: 'Successfullly added product.'}
         format.json { render json: @line_item, status: :created, location: @line_item }
       else
         format.html { render action: "new" }
