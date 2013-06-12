@@ -1,0 +1,4 @@
+// old RJS script
+//page.replace_html('cart', render @cart)
+
+$('#cart').html("<%= escape_javascript(render @cart) %>");
