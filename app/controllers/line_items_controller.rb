@@ -89,6 +89,10 @@ class LineItemsController < ApplicationController
       @line_item.destroy
     end
 
-    @cart.line_items.empty? ? (redirect_to store_url, notice: 'Your cart is empty') : (redirect_to @cart, notice: 'Item removed')
+    #@cart.line_items.empty? ? (redirect_to store_url, notice: 'Your cart is empty') : (redirect_to @cart, notice: 'Item removed')
+    respond_to do |format|
+      format.html { redirect_to store_url, notice: 'Item removed' }
+      format.js { @current_item = @line_item }
+    end
   end
 end

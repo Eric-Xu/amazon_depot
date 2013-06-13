@@ -1,0 +1,5 @@
+$('#cart').html("<%= escape_javascript(render @cart) %>");
+
+if ($('#cart tr').not('.total_line').length == 0) { $('#cart').hide('blind', 1000); }
+
+$("#current_item").css({"background-color": "pink"}).animate({"background-color": "#114411"}, 1000);
