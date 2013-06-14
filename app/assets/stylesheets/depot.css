@@ -36,7 +36,7 @@
 }
 
 #main {
-  margin-left: 18em;
+  margin-left: 21em;
   padding-top: 4ex;
   padding-left: 2em;
   padding-right: 2em;
@@ -45,10 +45,8 @@
 
 #side {
   float: left;
-  padding-top: 1em;
-  padding-left: 1em;
-  padding-bottom: 1em;
-  width: 17em;
+  padding: 1em;
+  width: 19em;
   background: #141;
 }
 #side a {
@@ -169,7 +167,8 @@
 /* Styles for the cart in the sidebar */
 
 #cart, #cart table {
-  font-size: smaller; color: white;
+  font-size: smaller;
+  color: white;
 }
 
 #cart table {
