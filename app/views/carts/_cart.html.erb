@@ -1,4 +1,4 @@
-<div class="cart_title">Your Cart</div>
+<div class="cart_title"><%= t('.title') %></div>
 <table>
 	<%= render(cart.line_items) %>
 	<tr class="total_line">
@@ -8,6 +8,6 @@
 </table>
 
 <% unless current_page?(new_order_path) %>
-	<%= button_to 'Checkout', new_order_path, method: :get, id: 'checkout' %>
+	<%= button_to t('.checkout'), new_order_path, method: :get, id: 'checkout' %>
 <% end %>
-<%= button_to 'Empty cart', cart, method: :delete, confirm: "Are you sure" %>
+<%= button_to t('.empty'), cart, method: :delete, confirm: "Are you sure" %>
