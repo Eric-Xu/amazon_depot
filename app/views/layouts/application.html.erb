@@ -9,6 +9,11 @@
 </head>
 <body id="store">
 	<div id="banner">
+		<%= form_tag store_path do %>
+			<%= submit_tag 'submit', class: 'localesubmit' %>
+			<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()', class: 'locale' %>
+			<%= javascript_tag "$('.localesubmit').hide()" %>
+		<% end %>
 		<%= image_tag("logo.png") %>
 		<%= @page_title || t('.title') %>
 	</div>

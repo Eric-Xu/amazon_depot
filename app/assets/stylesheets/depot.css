@@ -49,8 +49,20 @@
   width: 19em;
   background: #141;
 }
+
 #side a {
   color: #bfb; font-size: small;
+}
+
+.localesubmit {
+  float: right;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.locale {
+  float: right;
+  margin-top: 1em;
 }
 
 /* Styles for products/index */
